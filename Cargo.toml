@@ -1,0 +1,21 @@
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package]
+name = "zero2prod"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+
+# web server 프레임워크
+actix-web = "4.2.1"
+
+# async/await 프레임 워크
+tokio = { version = "1.21.2", features = ["macros", "rt-multi-thread"] }
+
+# 데이터 serialize
+serde = { version = "1.0.147", features = ["derive"] } 
+
+[dev-dependencies] # 개발 과정중 테스트
+reqwest = "0.11.12"
